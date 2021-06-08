@@ -1,0 +1,21 @@
+ type = raw events 
+
+count = 1
+
+speed = 1.0
+
+#启动测试
+start data >>   -----头
+
+Tap(726,1185,1000) #点击取消升级   Tap点击   ---------点击,  使用坐标
+UserWait(2000)   等待时间  
+DispatchString(zxw1234)  输入框输入数据
+-----------------------------------------------------------------------------
+
+aapt dump badging xxxx.apk   获取包名
+aapt dump badging xxxx.apk | find "launchable-activity"   获取主Activity
+
+
+1. 在cmd中输入 adb logcat -c 清除旧的log（以前的一些软件产生的日志）
+
+在cmd中输入 adb logcat >c:\1.txt 开始收集log，并将收集的log写入C盘的1.txt文件中（如果没有该文件会自动创建）
